@@ -42,9 +42,9 @@ class QueryCollector extends DataCollector
     /**
      * @param Request   $request
      * @param Response  $response
-     * @param Exception $exception
+     * @param \Throwable $exception
      */
-    public function collect(Request $request, Response $response, Exception $exception = null)
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
     {
         $this->data['queries'] = $this->logger->getQueries();
     }
